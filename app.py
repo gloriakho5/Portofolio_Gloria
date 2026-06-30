@@ -18,6 +18,8 @@ from config import Config
 from model import get_db_connection
 
 # --- 3. IMPORT BLUEPRINT BACKEND ---
+# --- 3. IMPORT BLUEPRINT BACKEND ---
+# --- 3. IMPORT BLUEPRINT BACKEND ---
 from Backend.admin.login import login_bp
 from Backend.admin.dashboard import dashboard_bp
 from Backend.admin.profiles import profiles_bp
@@ -25,7 +27,7 @@ from Backend.admin.skills import skills_bp
 from Backend.admin.experience import experience_bp
 from Backend.admin.projects import projects_bp
 from Backend.admin.upload import upload_bp
-from Backend.utama.utama import utama_bp #mauksao
+from Backend.utama.utama import utama_bp 
 
 # --- 4. INISIALISASI FLASK ---
 app = Flask(__name__, static_folder='Frontend', static_url_path='')

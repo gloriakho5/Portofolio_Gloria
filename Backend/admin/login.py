@@ -38,4 +38,4 @@ def admin_login():
 def admin_logout():
     # Menghapus session untuk proses logout
     session.clear()
-    return jsonify({"status": "sukses", "pesan": "Berhasil logout."}), 200 
+    return jsonify({"status": "sukses", "pesan": "Berhasil logout."}), 200

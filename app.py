@@ -25,7 +25,7 @@ from Backend.admin.skills import skills_bp
 from Backend.admin.experience import experience_bp
 from Backend.admin.projects import projects_bp
 from Backend.admin.upload import upload_bp
-from Backend.utama.utama import utama_bp
+from Backend.utama.utama import utama_bp #mauksao
 
 # --- 4. INISIALISASI FLASK ---
 app = Flask(__name__, static_folder='Frontend', static_url_path='')

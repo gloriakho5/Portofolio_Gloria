@@ -11,7 +11,7 @@ def admin_login():
     password = data.get('password')
 
     if not username or not password:
-        return jsonify({"status": "gagal", "pesan": "Username dan password wajib diisi!"}), 400
+        return jsonify({"status": "gagal", "pesan": "Username dan password wajib diisi!"}), 400 
 
     conn = get_db_connection()
     if conn is None:

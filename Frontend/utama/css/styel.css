@@ -1,0 +1,21 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+/* Efek gulir halus di seluruh komponen web portofolio publik */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mempercantik tampilan scrollbar browser */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f9f1f7;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

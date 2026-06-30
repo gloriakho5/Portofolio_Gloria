@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/admin/css/dashboard.css">
+</head>
+<body class="bg-slate-50 flex">
+    <div class="w-64 bg-slate-900 text-slate-300 p-6 flex flex-col space-y-2 h-screen sticky top-0">
+        <h2 class="text-white text-xl font-bold mb-6">Panel Admin</h2>
+        <a href="/admin/dashboard" class="px-4 py-2 bg-blue-600 rounded text-white font-medium">Dashboard</a>
+        <a href="/admin/profiles" class="px-4 py-2 rounded hover:bg-slate-800">Profil</a>
+        <a href="/admin/skills" class="px-4 py-2 rounded hover:bg-slate-800">Skills</a>
+        <a href="/admin/experience" class="px-4 py-2 rounded hover:bg-slate-800">Experience</a>
+        <a href="/admin/projects" class="px-4 py-2 rounded hover:bg-slate-800">Projects</a>
+        <hr class="border-slate-700 my-4">
+        <a href="/" class="text-xs text-slate-400 hover:text-white">← Lihat Website</a>
+    </div>
+
+    <div class="flex-1 p-10 space-y-6">
+        <h1 class="text-3xl font-bold text-slate-800">Ringkasan Portofolio</h1>
+        <p class="text-slate-500">Selamat datang di panel kendali utama aplikasi portofolio Anda.</p>
+        <div class="grid grid-cols-2 gap-6 max-w-2xl">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm">
+                <p class="text-sm text-slate-400 font-medium uppercase tracking-wider">Total Keahlian</p>
+                <p id="stat-skills" class="text-4xl font-extrabold text-blue-600 mt-2">0</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm">
+                <p class="text-sm text-slate-400 font-medium uppercase tracking-wider">Total Proyek</p>
+                <p id="stat-projects" class="text-4xl font-extrabold text-indigo-600 mt-2">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/admin/js/api.js"></script>
+    <script src="/admin/js/dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+/* --- ISI BERKAS EKSTERNAL: projects.css --- */
+
+/* 1. LOAD ENGINE TAILWIND CSS V4 secara Eksternal murni */
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+/* 2. CUSTOM STYLING & FIXING LAYOUT ADMIN */
+
+/* Memastikan area teks deskripsi nyaman dibaca saat mengetik */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Mengatur transisi global agar interaksi tombol terasa halus */
+button, input, textarea {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Mengatur scrollbar panel kanan daftar proyek agar minimalis dan cantik */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* KUNCI UTAMA: Memperbaiki posisi layout baris Upload Gambar agar sejajar simetris */
+.flex.gap-3 {
+    display: flex;
+    align-items: center; /* Membuat input file dan tombol upload rata tengah secara vertikal */
+    gap: 0.75rem;       /* Mengatur jarak pas antar komponen */
+    width: 100%;
+}
+
+/* Memastikan input file memakan sisa ruang yang tersedia dengan rapi */
+#file-proyek {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Desain tombol upload agar ukurannya pas, presisi, dan tidak menggeser komponen lain */
+#btn-upload-project {
+    height: 100%;
+    white-space: nowrap; /* Mencegah teks "Uploading..." tertekuk ke bawah */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Efek visual tambahan saat kotak input teks sedang aktif diketik (fokus) */
+input:focus, textarea:focus {
+    background-color: #ffffff !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}

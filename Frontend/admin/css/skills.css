@@ -1,0 +1,22 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+/* Desain tombol tambah agar konsisten */
+.btn-primary {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: #ffffff; /* text-white */
+    font-weight: 500; /* font-medium */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms; /* transition-all */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efek hover menggunakan pseudo-class CSS murni */
+.btn-primary:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+}

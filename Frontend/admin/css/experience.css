@@ -1,0 +1,7 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem; /* Ini adalah nilai murni dari space-y-1.5 atau gap-1.5 (6px) */
+}

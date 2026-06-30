@@ -1,0 +1,25 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+/* Kartu Statistik Gradien Halus */
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+/* Penulisan warna langsung tanpa @apply jauh lebih aman di Tailwind v4 untuk native CSS */
+.stat-skills::before {
+    background-color: #2563eb; /* Ini adalah kode warna resmi dari bg-blue-600 */
+}
+
+.stat-projects::before {
+    background-color: #4f46e5; /* Ini adalah kode warna resmi dari bg-indigo-600 */
+}

@@ -1,0 +1,15 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+/* Form input styling */
+input, textarea {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms; /* Representasi murni dari transition-all duration-200 */
+}
+
+input:focus, textarea:focus {
+    border-color: #2563eb; /* Representasi murni dari border-blue-600 */
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); /* Representasi murni dari ring-4 ring-blue-500/10 */
+}

@@ -1,0 +1,15 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@4/index.css";
+
+/* Gaya kustom untuk memastikan sidebar memenuhi layar penuh */
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Animasi halus saat menu admin disorot */
+.sidebar-link {
+    transition: all 0.2s ease-in-out;
+}
+.sidebar-link:hover {
+    transform: translateX(4px);
+}

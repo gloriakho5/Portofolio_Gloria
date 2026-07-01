@@ -41,17 +41,20 @@
     </div>
 
     <script>
-        // TAMBAHAN: Fungsi interaktif untuk menyembunyikan/memperlihatkan password
+        // 1. Definisikan API_URL Railway tanpa tanda koma atau slash di ujungnya
+        const API_URL = 'https://web-gloria-682024041-1f749.up.railway.app';
+
+        // Fungsi interaktif untuk menyembunyikan/memperlihatkan password
         function togglePasswordVisibility() {
             const passwordInput = document.getElementById('password');
             const eyeIcon = document.getElementById('ikon-mata');
 
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
-                eyeIcon.classList.replace('fa-eye', 'fa-eye-slash'); // Ganti jadi mata dicoret
+                eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
             } else {
                 passwordInput.type = 'password';
-                eyeIcon.classList.replace('fa-eye-slash', 'fa-eye'); // Kembali jadi mata normal
+                eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
             }
         }
 
@@ -65,8 +68,8 @@
             }
 
             try {
-                // Menembak API login backend kita di port 5000
-                const respon = await fetch('http://127.0.0.1:5000/api/admin/login', {
+                // 2. Menggunakan backtick (`) dan variabel API_URL agar dinamis di internet
+                const respon = await fetch(`${API_URL}/api/admin/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
@@ -79,7 +82,6 @@
 
                 if (hasil.status === 'sukses') {
                     alert("Login Berhasil! Mengalihkan ke panel admin...");
-                    // Pindah otomatis ke halaman dashboard admin jika sukses
                     window.location.href = '/admin/dashboard';
                 } else {
                     alert("Gagal Login: " + hasil.pesan);

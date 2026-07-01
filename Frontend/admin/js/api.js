@@ -1,1 +1,1 @@
-const API_URL = 'https://web-gloria-682024041-1f749.up.railway.app/';
+const API_URL = 'https://web-gloria-682024041-1f749.up.railway.app';

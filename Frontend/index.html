@@ -133,7 +133,7 @@
     </footer>
 
     <script>
-        const API_URL = 'http://127.0.0.1:5000';
+        const API_URL = 'https://web-gloria-682024041-1f749.up.railway.app';
 
         // 1. FUNGSI KIRIM EMAIL VIA RESEND API
         async function kirimEmail(e) {
@@ -225,7 +225,7 @@
                             <span class="font-semibold text-slate-700 text-sm">${s.nama_skill}</span>
                         </div>
                     `).join('');
-                }
+                } 
 
                 // C. Ambil Data Experience
                 const resExp = await fetch(`${API_URL}/api/experience`);

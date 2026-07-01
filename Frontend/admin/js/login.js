@@ -1,3 +1,4 @@
+const API_URL = 'https://web-gloria-682024041-1f749.up.railway.app';
 async function prosesLogin() {
     const usernameInput = document.getElementById('username').value;
     const passwordInput = document.getElementById('password').value;
@@ -29,6 +30,4 @@ async function prosesLogin() {
         console.error(error);
         alert("Gagal terhubung ke server backend Flask.");
     }
-
-    const API_URL = 'https://web-gloria-682024041-1f749.up.railway.app';
 }

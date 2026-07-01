@@ -54,7 +54,7 @@ def login_page():
 def dashboard_page():
     return app.send_static_file('admin/dashboard.html')
 
-@app.route('/admin/profiles')
+@app.route('/admin/profile')
 def profiles_page():
     return app.send_static_file('admin/profiles.html')
 

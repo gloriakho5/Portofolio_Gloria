@@ -71,6 +71,9 @@ async function muatDaftarProjects() {
 function isiFormUbahProyek(p) {
     idProyekTerpilih = p.id;
     document.getElementById('input-nama-proyek').value = p.nama_proyek;
+    
+    document.getElementById('input-tek-proyek').value = p.teknologi || '';
+    
     document.getElementById('input-deskripsi-proyek').value = p.deskripsi || '';
     document.getElementById('input-url-proyek').value = p.gambar_proyek || '';
 
@@ -78,57 +81,62 @@ function isiFormUbahProyek(p) {
     const btn = document.getElementById('btn-simpan-project');
     btn.innerText = "Perbarui Karya Proyek";
     btn.className = "w-full py-3.5 bg-amber-500 text-white text-sm font-bold rounded-xl hover:bg-amber-600 shadow-md cursor-pointer";
+
+    
+    btn.setAttribute("onclick", `updateProyek(${p.id})`);
 }
 
+
 // 4. FUNGSI ACTION: TAMBAH BARU (POST) / PERBARUI DATA (PUT) (KODE AWAL KAMU YANG DIUPDATE)
-async function tambahProyek() {
-    const urlGambar = document.getElementById('input-url-proyek').value;
-    const payload = {
-        nama_proyek: document.getElementById('input-nama-proyek').value,
-        deskripsi: document.getElementById('input-deskripsi-proyek').value,
-        gambar_proyek: urlGambar
-    };
+// ====== TAMBAHKAN FUNGSI INI DI PALING BAWAH FILE PROJECTS.JS ======
 
-    if (!payload.nama_proyek) {
-        alert('Nama proyek tidak boleh kosong!');
-        return;
-    }
-
-    // Tentukan URL dan Metode dinamis berdasarkan status form (Tambah atau Edit)
-    const url = idProyekTerpilih ? `${API_URL}/api/admin/projects/${idProyekTerpilih}` : `${API_URL}/api/admin/projects`;
-    const metode = idProyekTerpilih ? 'PUT' : 'POST';
+async function updateProyek(id) {
+    // Mengambil nilai input dari form
+    const namaProyek = document.getElementById('input-nama-proyek').value;
+    const teknologi = document.getElementById('input-tek-proyek').value;
+    const deskripsi = document.getElementById('input-deskripsi-proyek').value;
+    const gambarUrl = document.getElementById('input-url-proyek').value; // Mengambil URL Cloudinary jika ada
 
     try {
-        const res = await fetch(url, {
-            method: metode,
+        // Menembak endpoint update ke backend Flask kamu
+        const res = await fetch(`${API_URL}/api/admin/projects/${id}`, {
+            method: 'PUT', // Atau 'POST' sesuai dengan yang kamu daftarkan di app.py
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+            body: JSON.stringify({
+                nama_proyek: namaProyek,
+                teknologi: teknologi,
+                deskripsi: deskripsi,
+                gambar_proyek: gambarUrl // Sesuaikan nama properti ini dengan kolom DB kamu
+            })
         });
 
         if (res.ok) {
-            alert(idProyekTerpilih ? 'Proyek sukses diperbarui!' : 'Proyek baru beserta gambar Cloudinary berhasil ditambahkan!');
+            alert('Proyek berhasil diperbarui!');
+            // Mengembalikan text judul form menjadi Tambah kembali
+            document.getElementById('form-title-project').innerHTML = `<i class="fa-solid fa-folder-plus text-pink-500"></i> Tambah Proyek Baru`;
             
-            // Reset state form kembali bersih semula
-            idProyekTerpilih = null;
+            // Mengosongkan form kembali
             document.getElementById('input-nama-proyek').value = '';
-            document.getElementById('input-tek-proyek').value = ''; 
+            document.getElementById('input-tek-proyek').value = '';
             document.getElementById('input-deskripsi-proyek').value = '';
             document.getElementById('input-url-proyek').value = '';
-            document.getElementById('file-proyek').value = '';
+            if(document.getElementById('nama-file-terpilih')) {
+                document.getElementById('nama-file-terpilih').innerText = 'Belum ada file yang dipilih (PNG, JPG, JPEG, WEBP)';
+            }
 
-            document.getElementById('form-title-project').innerHTML = `<i class="fa-solid fa-folder-plus text-blue-500"></i> Tambah Proyek Baru`;
-            const btn = document.getElementById('btn-simpan-project');
-            btn.innerText = "Simpan Proyek Ke Cloud";
-            btn.className = "w-full py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 shadow-md transition-colors cursor-pointer";
+            // Kembalikan tombol simpan ke fungsi tambah semula
+            const btnSimpan = document.getElementById('btn-simpan-project');
+            btnSimpan.innerText = "Simpan Proyek Ke Cloud";
+            btnSimpan.setAttribute("onclick", "tambahProyek()");
 
-            muatDaftarProjects(); // Memuat ulang list proyek aktif secara real-time
+            // Refresh daftar proyek aktif di sebelah kanan
+            muatDaftarProjects(); 
         } else {
-            const errData = await res.json();
-            alert('Gagal memproses proyek: ' + (errData.pesan || 'Eror internal server.'));
+            alert('Gagal memperbarui data proyek.');
         }
-    } catch (err) {
-        console.error("Gagal menghubungi API:", err);
-        alert('Terjadi kesalahan jaringan, pastikan server Flask app.py menyala.');
+    } catch (error) {
+        console.error("Eror saat update proyek:", error);
+        alert("Terjadi kesalahan koneksi ke server backend.");
     }
 }
 

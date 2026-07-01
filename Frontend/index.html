@@ -15,59 +15,74 @@
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-[#fff9f9] text-zinc-800 antialiased selection:bg-pink-400 selection:text-white">
 
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="/api/admin/login" id="nav-brand" class="text-2xl font-extrabold text-blue-600 tracking-tight">Glooo</a>
+            <a href="/admin/login" id="nav-brand" class="text-2xl font-extrabold text-pink-500 tracking-tight">Glooo</a>
             <div class="flex space-x-8 font-semibold text-sm text-slate-600">
-                <a href="#home" class="hover:text-blue-600 transition-colors">Home</a>
-                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
-                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
-                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+                <a href="#home" class="hover:text-pink-500 transition-colors">Home</a>
+                <a href="#about" class="hover:text-pink-500 transition-colors">About</a>
+                <a href="#skills" class="hover:text-pink-500 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-pink-500 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-pink-500 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-pink-500 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
     <section id="home" class="max-w-4xl mx-auto px-6 py-24 flex flex-col items-center justify-center text-center space-y-6 min-h-[70vh]">
         
-        <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-xl ring-4 ring-blue-500/10 bg-slate-200">
+        <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-xl ring-4 ring-pink-500/10 bg-slate-200">
             <img id="img-profil" src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/avatar.min.svg" alt="Foto Profil Gloria" class="w-full h-full object-cover">
         </div>
 
-        <p class="text-xs font-bold text-blue-600 tracking-widest uppercase bg-blue-50 px-3 py-1 rounded-full">Selamat Datang</p>
+        <p class="text-xs font-bold text-pink-600 tracking-widest uppercase bg-pink-50 px-3 py-1 rounded-full">Selamat Datang</p>
         <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Halo, Saya <span id="txt-nama" class="text-blue-600">Gloria Costansia Kho</span>
+            Halo, Saya <span id="txt-nama" class="text-pink-500">Gloria Costansia Kho</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed">
             <span id="txt-peran" class="font-medium text-slate-700">Seorang Mahasiswa Fakultas Teknologi Informasi Prodi Sistem Informasi Mempunyai banyak hobi</span>. 
             <span id="txt-bio"></span>
         </p>
         <div class="pt-4">
-            <a href="#projects" class="px-8 py-4 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 shadow-lg shadow-blue-500/20 transition-all text-sm">Lihat Proyek Saya</a>
+            <a href="#projects" class="px-8 py-4 bg-pink-500 text-white font-medium rounded-xl hover:bg-pink-600 shadow-lg shadow-pink-200/50 transition-all text-sm">Lihat Proyek Saya</a>
         </div>
     </section>
 
-    <section id="about" class="bg-white border-y border-slate-100 py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
-            <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Tentang Saya</h2>
+    <section id="about" class="bg-white border-y border-pink-100 py-24">
+    <div class="max-w-5xl mx-auto px-6 space-y-12">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-zinc-900 tracking-tight inline-block relative after:content-[''] after:block after:w-12 after:h-1 after:bg-pink-500 after:mx-auto after:mt-3 after:rounded-full">Tentang Saya</h2>
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 pt-4">
             
-            <div class="w-28 h-28 rounded-full mx-auto overflow-hidden border border-slate-200 shadow-md bg-slate-100">
+            <div class="w-64 h-64 rounded-2xl overflow-hidden border border-zinc-200 shadow-md bg-zinc-50 shrink-0">
                 <img id="img-profil-about" src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/avatar.min.svg" alt="About Gloria" class="w-full h-full object-cover">
             </div>
 
-            <p class="text-slate-600 max-w-2xl mx-auto text-base leading-relaxed">
-                Fokus utama saya dalam Bidang saya adalah **Bisnis** dikarenakan saya menyukai hal-hal berbau bisnis, serta analisis data (*Data Analytics*).
-            </p>
-            <div class="pt-2">
-                <a href="#contact" class="inline-block px-6 py-3 bg-slate-900 text-white font-medium rounded-xl text-sm hover:bg-slate-800 transition-colors">Hubungi Saya</a>
+            <div class="text-left max-w-xl space-y-4">
+                <h3 class="text-2xl font-bold text-zinc-900">Tech Enthusiast & Business Analyst</h3>
+                
+                <p class="text-zinc-600 text-base leading-relaxed">
+                    Saya memiliki ketertarikan yang besar dalam mengintegrasikan solusi teknologi dengan strategi pengembangan bisnis. Sebagai mahasiswa Sistem Informasi, fokus utama saya diarahkan pada pengelolaan basis data yang optimal serta analisis data (<span class="text-pink-500 font-semibold">Data Analytics</span>).
+                </p>
+                
+                <p class="text-zinc-600 text-base leading-relaxed">
+                    Saya percaya bahwa pengolahan data yang tepat mampu menghasilkan keputusan bisnis yang cerdas dan berdampak strategis bagi kebutuhan industri modern.
+                </p>
+                
+                <div class="pt-4">
+                    <a href="#contact" class="inline-block px-6 py-3 bg-pink-500 text-white font-medium rounded-xl text-sm hover:bg-pink-600 shadow-md shadow-pink-100 transition-colors">Hubungi Saya</a>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <section id="skills" class="py-24 bg-slate-50">
+        </div>
+    </div>
+</section>
+
+    <section id="skills" class="py-24 bg-[#fff9f9]">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-slate-900 tracking-tight mb-4">Keahlian</h2>
             <p class="text-center text-slate-500 text-sm mb-16">Teknologi dan keahlian analisis data yang saya kuasai.</p>
@@ -82,7 +97,7 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-slate-50 border-t border-slate-100">
+    <section id="projects" class="py-24 bg-[#fff9f9] border-t border-slate-100">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-slate-900 tracking-tight mb-16">Proyek Saya</h2>
             <div id="container-projects" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
@@ -97,23 +112,23 @@
         <form onsubmit="kirimEmail(event)" class="space-y-4 text-left">
             <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Nama Anda</label>
-                <input type="text" id="nama-pengirim" required placeholder="Masukkan nama lengkap" class="w-full px-4 py-3 border border-slate-200 bg-white text-sm rounded-xl focus:outline-none focus:border-blue-600 transition-colors">
+                <input type="text" id="nama-pengirim" required placeholder="Masukkan nama lengkap" class="w-full px-4 py-3 border border-slate-200 bg-white text-sm rounded-xl focus:outline-none focus:border-pink-600 transition-colors">
             </div>
             <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Email Anda</label>
-                <input type="email" id="email-pengirim" required placeholder="nama@example.com" class="w-full px-4 py-3 border border-slate-200 bg-white text-sm rounded-xl focus:outline-none focus:border-blue-600 transition-colors">
+                <input type="email" id="email-pengirim" required placeholder="nama@example.com" class="w-full px-4 py-3 border border-slate-200 bg-white text-sm rounded-xl focus:outline-none focus:border-pink-600 transition-colors">
             </div>
             <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Pesan Anda</label>
-                <textarea id="pesan-email" rows="4" required placeholder="Tulis pesan Anda di sini..." class="w-full px-4 py-3 border border-slate-200 bg-white text-sm rounded-xl focus:outline-none focus:border-blue-600 transition-colors"></textarea>
+                <textarea id="pesan-email" rows="4" required placeholder="Tulis pesan Anda di sini..." class="w-full px-4 py-3 border border-slate-200 bg-white text-sm rounded-xl focus:outline-none focus:border-pink-600 transition-colors"></textarea>
             </div>
-            <button type="submit" class="w-full py-3.5 bg-blue-600 text-white font-semibold text-sm rounded-xl hover:bg-blue-700 transition-all shadow-md shadow-blue-500/10 cursor-pointer">
+            <button type="submit" class="w-full py-3.5 bg-pink-600 text-white font-semibold text-sm rounded-xl hover:bg-pink-700 transition-all shadow-md shadow-pink-500/10 cursor-pointer">
                 Kirim Pesan
             </button>
         </form>
     </section>
 
-    <footer class="bg-slate-50 py-8 text-center text-xs text-slate-400 border-t border-slate-100">
+    <footer class="bg-[#fff9f9] py-8 text-center text-xs text-slate-400 border-t border-slate-100">
         <p>&copy; 2026 Gloria Costansia Kho. All Rights Reserved.</p>
     </footer>
 
@@ -158,12 +173,12 @@
         function dapatkanIkonMurni(nama) {
             const txt = nama.toLowerCase();
             if (txt.includes('python')) return '<i class="fa-brands fa-python text-blue-500 text-2xl w-10 text-center"></i>';
-            if (txt.includes('sql') || txt.includes('database')) return '<i class="fa-solid fa-database text-blue-600 text-2xl w-10 text-center"></i>';
-            if (txt.includes('flask') || txt.includes('backend')) return '<i class="fa-solid fa-server text-blue-700 text-2xl w-10 text-center"></i>';
+            if (txt.includes('sql') || txt.includes('database')) return '<i class="fa-solid fa-database text-pink-600 text-2xl w-10 text-center"></i>';
+            if (txt.includes('flask') || txt.includes('backend')) return '<i class="fa-solid fa-server text-pink-700 text-2xl w-10 text-center"></i>';
             if (txt.includes('html') || txt.includes('css')) return '<i class="fa-brands fa-html5 text-orange-500 text-2xl w-10 text-center"></i>';
             if (txt.includes('js') || txt.includes('javascript')) return '<i class="fa-brands fa-js text-yellow-500 text-2xl w-10 text-center"></i>';
             if (txt.includes('git')) return '<i class="fa-brands fa-git-alt text-orange-600 text-2xl w-10 text-center"></i>';
-            return '<i class="fa-solid fa-chart-line text-blue-500 text-2xl w-10 text-center"></i>';
+            return '<i class="fa-solid fa-chart-line text-pink-500 text-2xl w-10 text-center"></i>';
         }
 
         function dapatkanIkonProyek(nama) {
@@ -218,16 +233,16 @@
                     const data = await resExp.json();
                     document.getElementById('container-experience').innerHTML = data.map(e => `
                         <div class="relative pl-8 md:pl-0">
-                            <div class="absolute -left-[11px] top-1.5 bg-blue-600 w-5 h-5 rounded-full border-4 border-white shadow-xs"></div>
+                            <div class="absolute -left-[11px] top-1.5 bg-pink-500 w-5 h-5 rounded-full border-4 border-white shadow-xs"></div>
                             <div class="grid md:grid-cols-4 gap-2 md:gap-8">
                                 <div class="md:text-right pt-1">
-                                    <span class="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-md inline-block">
+                                    <span class="text-sm font-bold text-pink-600 bg-pink-50 px-3 py-1 rounded-md inline-block">
                                         ${e.tahun_mulai || '2025'} - ${e.tahun_selesai || 'Sekarang'}
                                     </span>
                                 </div>
                                 <div class="md:col-span-3 bg-white border border-slate-200/60 rounded-xl p-6 hover:shadow-md transition-shadow duration-300 space-y-1">
                                     <h3 class="text-lg font-bold text-slate-900">${e.posisi}</h3>
-                                    <p class="text-sm font-semibold text-blue-600">${e.perusahaan}</p>
+                                    <p class="text-sm font-semibold text-pink-600">${e.perusahaan}</p>
                                     <p class="text-xs text-slate-500 leading-relaxed pt-2">${e.deskripsi || 'Tidak ada deskripsi.'}</p>
                                 </div>
                             </div>
@@ -252,14 +267,14 @@
                                 </div>
                                 <div class="space-y-4 pt-6">
                                     <div class="flex gap-2">
-                                        <span class="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-md">Business</span>
-                                        <span class="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-md">Data Analysis</span>
-                                        <span class="px-2.5 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-md">SQL</span>
+                                        <span class="px-2.5 py-1 bg-pink-50 text-pink-600 text-[10px] font-bold rounded-md">Business</span>
+                                        <span class="px-2.5 py-1 bg-pink-50 text-pink-600 text-[10px] font-bold rounded-md">Data Analysis</span>
+                                        <span class="px-2.5 py-1 bg-pink-50 text-pink-600 text-[10px] font-bold rounded-md">SQL</span>
                                     </div>
                                     <div class="flex gap-5 text-xs font-bold text-slate-500 border-t border-slate-100 pt-4">
-                                        <a href="${p.link_proyek || '#'}" target="_blank" class="hover:text-blue-600 flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Demo</a>
-                                        <a href="#" class="hover:text-blue-600 flex items-center gap-1.5"><i class="fa-regular fa-file-code"></i> Docs</a>
-                                        <a href="#" class="hover:text-blue-600 flex items-center gap-1.5"><i class="fa-brands fa-github"></i> Code</a>
+                                        <a href="${p.link_proyek || '#'}" target="_blank" class="hover:text-pink-600 flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Demo</a>
+                                        <a href="#" class="hover:text-pink-600 flex items-center gap-1.5"><i class="fa-regular fa-file-code"></i> Docs</a>
+                                        <a href="#" class="hover:text-pink-600 flex items-center gap-1.5"><i class="fa-brands fa-github"></i> Code</a>
                                     </div>
                                 </div>
                             </div>

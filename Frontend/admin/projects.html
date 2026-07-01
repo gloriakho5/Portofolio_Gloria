@@ -33,13 +33,29 @@
 
     <div class="w-64 bg-slate-900 text-slate-300 p-6 flex flex-col space-y-2 h-screen sticky top-0 shadow-xl">
         <h2 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-sliders text-blue-500"></i> Panel Admin
+            <i class="fa-solid fa-sliders text-pink-500"></i> Panel Admin
         </h2>
-        <a href="dashboard.html" class="px-4 py-2.5 rounded-xl hover:bg-slate-800 transition-colors text-sm">Dashboard</a>
-        <a href="profiles.html" class="px-4 py-2.5 rounded-xl hover:bg-slate-800 transition-colors text-sm">Profil</a>
-        <a href="skills.html" class="px-4 py-2.5 rounded-xl hover:bg-slate-800 transition-colors text-sm">Skills</a>
-        <a href="experience.html" class="px-4 py-2.5 rounded-xl hover:bg-slate-800 transition-colors text-sm">Experience</a>
-        <a href="projects.html" class="px-4 py-2.5 bg-blue-600 rounded-xl text-white font-semibold text-sm shadow-md shadow-blue-500/20">Projects</a>
+        <nav class="flex flex-col space-y-2 font-medium text-sm">
+            <a href="/admin/dashboard" class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white rounded-xl transition-all">
+                <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
+            </a>
+            
+            <a href="/admin/profile" class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white rounded-xl transition-all">
+                <i class="fa-solid fa-user w-5"></i> Profil
+            </a>
+            
+            <a href="/admin/skills" class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white rounded-xl transition-all">
+                <i class="fa-solid fa-star w-5"></i> Skills
+            </a>
+            
+            <a href="/admin/experience" class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white rounded-xl transition-all">
+                <i class="fa-solid fa-briefcase w-5"></i> Experience
+            </a>
+            
+            <a href="/admin/projects" class="flex items-center gap-3 px-4 py-3 bg-pink-600 text-white rounded-xl transition-all shadow-md">
+                <i class="fa-solid fa-folder-open w-5"></i> Projects
+            </a>
+        </nav>
         <hr class="border-slate-800 my-4">
         <a href="../index.html" class="text-xs text-slate-400 hover:text-white transition-colors pl-4">← Lihat Website Utama</a>
     </div>
@@ -54,33 +70,33 @@
             
             <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-4">
                 <h3 id="form-title-project" class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2">
-                    <i class="fa-solid fa-folder-plus text-blue-500"></i> Tambah Proyek Baru
+                    <i class="fa-solid fa-folder-plus text-pink-500"></i> Tambah Proyek Baru
                 </h3>
                 <div class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Nama Proyek Aplikasi</label>
-                        <input type="text" id="input-nama-proyek" placeholder="Contoh: Digital Library Management System" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 bg-white text-slate-800 text-sm transition-all focus:ring-4 focus:ring-blue-500/10">
+                        <input type="text" id="input-nama-proyek" placeholder="Contoh: Digital Library Management System" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-pink-600 bg-white text-slate-800 text-sm transition-all focus:ring-4 focus:ring-pink-500/10">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Teknologi yang Digunakan</label>
-                        <input type="text" id="input-tek-proyek" placeholder="Contoh: Java, NetBeans, MySQL" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 bg-white text-slate-800 text-sm transition-all focus:ring-4 focus:ring-blue-500/10">
+                        <input type="text" id="input-tek-proyek" placeholder="Contoh: Java, NetBeans, MySQL" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-pink-600 bg-white text-slate-800 text-sm transition-all focus:ring-4 focus:ring-pink-500/10">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Deskripsi Singkat Proyek</label>
-                        <textarea id="input-deskripsi-proyek" placeholder="Jelaskan fungsionalitas sistem informasi yang Anda bangun..." rows="4" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-600 bg-white text-slate-800 text-sm resize-none transition-all focus:ring-4 focus:ring-blue-500/10"></textarea>
+                        <textarea id="input-deskripsi-proyek" placeholder="Jelaskan fungsionalitas sistem informasi yang Anda bangun..." rows="4" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-pink-600 bg-white text-slate-800 text-sm resize-none transition-all focus:ring-4 focus:ring-pink-500/10"></textarea>
                     </div>
                     
                     <div>
                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Upload Preview Gambar Proyek</label>
                         
-                        <div class="border-2 border-dashed border-slate-200 hover:border-blue-500 rounded-2xl p-5 text-center bg-slate-50/50 transition-all relative group mb-3">
+                        <div class="border-2 border-dashed border-slate-200 hover:border-pink-500 rounded-2xl p-5 text-center bg-slate-50/50 transition-all relative group mb-3">
                             <input type="file" id="file-proyek" accept="image/*" onchange="tampilkanNamaFile(this)" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
                             <div class="space-y-2">
-                                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-200">
-                                    <i class="fa-solid fa-images text-xl text-blue-600"></i>
+                                <div class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-200">
+                                    <i class="fa-solid fa-images text-xl text-pink-600"></i>
                                 </div>
                                 <div class="text-xs text-slate-600">
-                                    <span class="font-bold text-blue-600">Klik untuk pilih file gambar</span> atau drag & drop di sini
+                                    <span class="font-bold text-pink-600">Klik untuk pilih file gambar</span> atau drag & drop di sini
                                 </div>
                                 <p id="nama-file-terpilih" class="text-[11px] font-medium text-slate-400 italic">Belum ada file yang dipilih (PNG, JPG, JPEG, WEBP)</p>
                             </div>
@@ -93,7 +109,7 @@
                         <input type="text" id="input-url-proyek" readonly placeholder="URL Gambar Proyek Otomatis Terisi Disini Setelah di-Upload" class="w-full px-4 py-2.5 border border-slate-100 bg-slate-50 rounded-xl text-slate-500 text-xs focus:outline-none truncate">
                     </div>
 
-                    <button id="btn-simpan-project" onclick="tambahProyek()" class="w-full py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 shadow-md transition-all cursor-pointer">Simpan Proyek Ke Cloud</button>
+                    <button id="btn-simpan-project" onclick="tambahProyek()" class="w-full py-3.5 bg-pink-600 text-white font-bold rounded-xl hover:bg-pink-700 shadow-md transition-all cursor-pointer">Simpan Proyek Ke Cloud</button>
                 </div>
             </div>
 
@@ -106,7 +122,7 @@
         </div>
     </div>
     
-    <script src="js/api.js"></script>
-    <script src="js/projects.js"></script>
+    <script src="/admin/js/api.js"></script>
+    <script src="/admin/js/projects.js"></script>
 </body>
 </html>
